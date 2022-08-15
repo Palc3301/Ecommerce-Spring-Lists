@@ -1,0 +1,22 @@
+package com.mlfacisa.jemao.repository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.mlfacisa.jemao.service.ProdutoService;
+import com.mlfacisa.jemao.service.UserService;
+
+@Service
+public class CarrinhoRepository {
+	
+	@Autowired
+	CategoriaService categoriaService;
+	
+	@Autowired
+	ProdutoService produtoService;
+	
+	@Autowired
+	UserService userService;
+
+
+}

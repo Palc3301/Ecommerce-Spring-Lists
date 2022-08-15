@@ -1,0 +1,33 @@
+package com.mlfacisa.jemao.service;
+
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.mlfacisa.jemao.entity.Carrinho;
+import com.mlfacisa.jemao.entity.Pedido;
+import com.mlfacisa.jemao.repository.PedidoRepository;
+
+@Service
+public class PedidoService {
+	
+	@Autowired
+	private PedidoRepository pedidoRepository;
+	
+	public Pedido findId (int id) {
+		return pedidoRepository.findId(id); 
+	}
+	
+	public boolean addPedido (Pedido pedido) {
+		pedido.setHoraEnvio(new Date());
+		pedidoRepository.novoPedido(pedido);
+		return true;
+	}
+	
+	public List<Pedido> findAll() {
+		return pedidoRepository.findAll();
+	
+}
+

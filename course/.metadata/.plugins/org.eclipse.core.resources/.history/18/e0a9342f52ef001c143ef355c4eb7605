@@ -1,0 +1,24 @@
+package com.mlfacisa.jemao.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.mlfacisa.jemao.entity.Pedido;
+import com.mlfacisa.jemao.repository.PedidoRepository;
+
+@Service
+public class PedidoService {
+	
+	@Autowired
+	private PedidoRepository pedidoRepository;
+	
+	public Pedido findId (int id) {
+		return pedidoRepository.findId(id); 
+	}
+	
+	public boolean addPedido (Pedido pedido) {
+		pedidoRepository.novoPedido(pedido);
+		return true;
+	}
+}
+

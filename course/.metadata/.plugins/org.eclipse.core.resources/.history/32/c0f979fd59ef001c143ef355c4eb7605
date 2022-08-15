@@ -1,0 +1,64 @@
+package com.mlfacisa.jemao.entity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Carrinho {
+	
+	private List<Pedido> pedidos = new ArrayList<>();
+	private Double quantidade;
+	private String name;
+	private int id;
+	
+	
+	public Carrinho() {
+	}
+
+	public Carrinho(Double quantidade, String name) {
+		this.quantidade = quantidade;
+		this.name = name;
+	}
+
+	public List<Pedido> getPedidos() {
+		return pedidos;
+	}
+
+	public void setPedidos(List<Pedido> pedidos) {
+		this.pedidos = pedidos;
+	}
+
+	public Double getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(Double quantidade) {
+		this.quantidade = quantidade;
+	}
+	
+	 public void addProduto(Pedido pedido) {
+	        pedidos.add(pedido);
+	    }
+	 
+	 public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public void addQtdTotal(double quantidade) {
+	        this.quantidade += quantidade;
+	    }
+	
+}

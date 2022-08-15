@@ -1,0 +1,5 @@
+package com.mlfacisa.jemao.enums;
+
+public class CategoriaRepository {
+
+}

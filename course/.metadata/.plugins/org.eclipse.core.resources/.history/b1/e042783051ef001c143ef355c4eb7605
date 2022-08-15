@@ -1,0 +1,67 @@
+ package com.mlfacisa.jemao.entity;
+
+import com.mlfacisa.jemao.enums.PedidoStatus;
+
+public class Pedido {
+	
+	private int id;
+	private String horaEnvio;
+	private PedidoStatus pedidoStatus;
+	private Carrinho carrinho;
+	
+	
+	public Pedido() {
+		
+	}
+
+
+	public Pedido(int id, String horaEnvio, PedidoStatus pedidoStatus, Carrinho carrinho) {
+		super();
+		this.id = id;
+		this.horaEnvio = horaEnvio;
+		this.pedidoStatus = pedidoStatus;
+		this.carrinho = carrinho;
+	}
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public String getMoment() {
+		return horaEnvio;
+	}
+
+
+	public void setMoment(String horaEnvio) {
+		this.horaEnvio = horaEnvio;
+	}
+
+
+	public PedidoStatus getPedidoStatus() {
+		return pedidoStatus;
+	}
+
+
+	public void setPedidoStatus(PedidoStatus pedidoStatus) {
+		this.pedidoStatus = pedidoStatus;
+	}
+
+
+	public Carrinho getCarrinho() {
+		return carrinho;
+	}
+
+
+	public void setCarrinho(Carrinho carrinho) {
+		this.carrinho = carrinho;
+	}
+	
+	
+}

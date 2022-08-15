@@ -1,0 +1,5 @@
+package com.mlfacisa.jemao.controller;
+
+public class UserController {
+
+}

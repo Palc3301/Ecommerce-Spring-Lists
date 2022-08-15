@@ -1,0 +1,8 @@
+package com.mlfacisa.jemao.repository;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class UserRepository {
+
+}

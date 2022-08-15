@@ -1,0 +1,33 @@
+package com.mlfacisa.jemao.repository;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import com.mlfacisa.jemao.entity.Pedido;
+
+@Repository
+public class PedidoRepository {
+	
+	private List<Pedido> pedidos;
+	
+	public PedidoRepository() {
+		this.pedidos = new ArrayList();
+	}
+
+	public List<Pedido> findAll() {
+		return pedidos;
+	}
+	
+	public void novoPedido(Pedido pedido) {
+		pedidos.add(pedido);
+	}
+	
+	public Pedido findId (int id) {
+		for (Pedido pedido : pedidos) {
+			if (pedido.getId() == id)
+				return pedido;
+		}
+	}
+}

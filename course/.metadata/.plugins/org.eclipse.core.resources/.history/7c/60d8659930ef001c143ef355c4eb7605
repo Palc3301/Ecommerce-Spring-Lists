@@ -1,0 +1,12 @@
+ package com.mlfacisa.jemao.entity;
+
+import com.mlfacisa.jemao.enums.PedidoStatus;
+
+public class Pedido {
+	
+	private String id;
+	private String moment;
+	private PedidoStatus produtoStatus;
+	private Carrinho carrinho;
+	
+}

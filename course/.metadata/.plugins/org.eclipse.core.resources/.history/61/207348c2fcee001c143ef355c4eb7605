@@ -1,0 +1,5 @@
+package com.mlfacisa.jemao.entity;
+
+public class Carrinho {
+
+}

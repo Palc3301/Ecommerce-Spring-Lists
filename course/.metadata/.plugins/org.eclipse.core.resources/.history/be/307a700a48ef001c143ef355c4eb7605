@@ -1,0 +1,34 @@
+package com.mlfacisa.jemao.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.mlfacisa.jemao.entity.Carrinho;
+import com.mlfacisa.jemao.repository.CarrinhoRepository;
+
+@Service
+public class CarrinhoService {
+	
+	@Autowired
+	CarrinhoRepository CarrinhoRepository;
+	
+	@Autowired
+	UserService userService;
+	
+	
+	public void deleteCarrinho(int id) {
+		Carrinho  DeleteCarrinho = carrinhoRepository.findCarrinhoId(id);
+		carrinhoRepository.deleteCarrinho(DeleteCarrinho);
+	}
+	
+	public Carrinho findCarrinhoId(int id) {
+		return CarrinhoRepository.findCarrinhoId(id);
+	}
+	
+	public List<Carrinho> findAll() {
+		return CarrinhoRepository.findAll();
+	
+	}
+}

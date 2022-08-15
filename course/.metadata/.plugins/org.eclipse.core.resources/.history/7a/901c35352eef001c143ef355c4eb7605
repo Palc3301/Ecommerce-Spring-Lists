@@ -1,0 +1,5 @@
+package com.mlfacisa.jemao.repository;
+
+public class PedidoRepository {
+
+}

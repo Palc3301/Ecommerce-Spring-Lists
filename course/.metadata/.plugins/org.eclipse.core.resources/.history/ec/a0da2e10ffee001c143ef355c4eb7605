@@ -1,0 +1,10 @@
+ package com.mlfacisa.jemao.entity;
+
+public class Pedido {
+	
+	private String id;
+	private String moment;
+	private ProdutoStatus produtoStatus;
+	private Carrinho carrinho;
+	
+}
